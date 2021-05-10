@@ -92,8 +92,8 @@ const HeroSectionText = styled.span`
   }
 `;
 
-export const Hero = () => {
-  const { t, i18n } = useTranslation();
+export const Hero = (): JSX.Element => {
+  const { t } = useTranslation();
 
   return (
     <HeroContainer>

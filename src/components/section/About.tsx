@@ -4,7 +4,7 @@ import { Section } from "./Section";
 import github from "../../images/icons/githubDark.png";
 import linkedIn from "../../images/icons/linkedIn.png";
 import twitter from "../../images/icons/twitter.png";
-import { useTranslation, Link } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const AboutContainer = styled(Section)``;
 
@@ -36,8 +36,8 @@ const AboutText = styled.div`
   }
 `;
 
-export const About = () => {
-  const { t, i18n } = useTranslation();
+export const About = (): JSX.Element => {
+  const { t } = useTranslation();
 
   return (
     <AboutContainer id="about">

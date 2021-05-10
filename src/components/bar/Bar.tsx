@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import logo from "../../images/icons/favicon.png";
 import githubLogo from "../../images/icons/github.png";
 import { LanguageSelector } from "../languageSelector/LanguageSelector";
@@ -31,7 +31,7 @@ const Option = styled.div`
   padding: 0 5px;
 `;
 
-export const Bar = () => (
+export const Bar = (): JSX.Element => (
   <StyledBar>
     <Left>
       <Option>
@@ -47,7 +47,11 @@ export const Bar = () => (
     </Left>
     <Right>
       <Option>
-        <a href="https://www.github.com/albert-gonzalez" target="_blank">
+        <a
+          href="https://www.github.com/albert-gonzalez"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={githubLogo} alt="Github" />
         </a>
       </Option>

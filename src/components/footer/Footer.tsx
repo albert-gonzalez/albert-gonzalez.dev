@@ -12,8 +12,8 @@ const FooterContainer = styled.div`
   line-height: 1.5em;
 `;
 
-export const Footer = () => {
-  const { t, i18n } = useTranslation();
+export const Footer = (): JSX.Element => {
+  const { t } = useTranslation();
 
   return (
     <FooterContainer>

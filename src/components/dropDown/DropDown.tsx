@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+interface DropDownInput {
+  button: JSX.Element;
+  className: string;
+  content: JSX.Element;
+}
+
 const DropDownContainer = styled.div`
   position: relative;
   display: inline-block;
@@ -41,7 +47,11 @@ export const DropDownIcon = styled.img`
   width: 32px;
 `;
 
-export const DropDown = ({ button, content, className }) => {
+export const DropDown = ({
+  button,
+  content,
+  className,
+}: DropDownInput): JSX.Element => {
   const [shown, setShown] = useState(false);
   useEffect(() => {
     const hideMenu = (e: MouseEvent) => {

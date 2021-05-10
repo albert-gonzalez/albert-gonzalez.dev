@@ -17,7 +17,7 @@ const Global = createGlobalStyle`
   }
 `;
 // markup
-const IndexPage = () => (
+const IndexPage = (): JSX.Element => (
   <React.Fragment>
     <ThemeProvider theme={lightTheme}>
       <Reset />
@@ -33,7 +33,7 @@ const IndexPage = () => (
 export default IndexPage;
 
 export const query = graphql`
-  query($language: String!) {
+  query ($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
