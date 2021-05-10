@@ -7,6 +7,7 @@ import { lightTheme } from "../themes/light";
 import { graphql } from "gatsby";
 import { About } from "../components/section/About";
 import { Footer } from "../components/footer/Footer";
+import { Helmet } from "gatsby-plugin-react-i18next";
 
 const Global = createGlobalStyle`
   body {
@@ -20,6 +21,7 @@ const Global = createGlobalStyle`
 const IndexPage = (): JSX.Element => (
   <React.Fragment>
     <ThemeProvider theme={lightTheme}>
+      <Helmet title="Albert González - Software Developer" />
       <Reset />
       <Global />
       <Bar />

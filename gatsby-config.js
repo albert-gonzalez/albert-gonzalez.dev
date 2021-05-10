@@ -3,6 +3,7 @@ module.exports = {
     title: "albert-gonzalez.dev",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-typescript",
     {

@@ -86,6 +86,7 @@ const HeroSectionText = styled.span`
   font-weight: bold;
   color: ${(props) => props.theme.colors.white};
   margin: 0 20%;
+  text-shadow: 1px 1px 2px ${(props) => props.theme.colors.black};
 
   @media (min-width: ${(props) => props.theme.breakpoints.tablet}) {
     font-size: 3em;
