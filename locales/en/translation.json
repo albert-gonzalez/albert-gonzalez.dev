@@ -9,5 +9,7 @@
   "nsbText": "<p>NoSoloBits is a website dedicated to retro video games. The backend part is made with PHP and MySQL. The frontend part is made with HTML, JS and SASS, compiled with Webpack.</p>",
   "devAdventureText": "<p>I stepped out of my comfort zone to make this little video game, as I am not a video game designer. The result has been a simple, short game, but I think it’s still a good cover letter. I put a lot of passion into it, I hope you like it!</p>",
   "experience": "Work Experience",
+  "mtText": "<p>Mailtrack's product is a Google Chrome extension that allows you to track emails in Gmail. On the one hand I work in backend services, developed with PHP and Node.js. On the other hand I work on the extension, developed with TypeScript, CSS and HTML. I also do some system tasks, like setting up Docker or services in AWS.</p>",
+  "mtDates": "July 2018 - Nowadays",
   "footer": "Created by Albert González. Thank you for visiting me!"
 }

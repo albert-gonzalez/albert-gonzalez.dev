@@ -37,8 +37,10 @@ export const CardImage = styled.div<CardImageProps>`
   }
 `;
 
+export const CardSubtitle = styled.div``;
+
 export const CardText = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.tablet}) {
-    width: 70%;
+    width: 100%;
   }
 `;

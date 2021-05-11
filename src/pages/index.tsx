@@ -9,9 +9,16 @@ import { About } from "../components/section/About";
 import { Footer } from "../components/footer/Footer";
 import { Helmet } from "gatsby-plugin-react-i18next";
 import { Projects } from "../components/section/Projects";
+import { Experience } from "../components/section/Experience";
 
 const Global = createGlobalStyle<{ theme: Theme }>`
   ${reset};
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -22,16 +29,26 @@ const Global = createGlobalStyle<{ theme: Theme }>`
   }
 
   h2,
-  h3 {
+  h3,
+  h4, h5 {
     margin: ${(props) => props.theme.components.margin};
+    font-weight: bold;
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   h3 {
     font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  h5 {
+    font-size: 1.3em;
   }
 
   p {
@@ -56,6 +73,7 @@ const IndexPage = (): JSX.Element => (
       <Hero />
       <About />
       <Projects />
+      <Experience />
       <Footer />
     </ThemeProvider>
   </React.Fragment>
