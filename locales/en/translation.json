@@ -1,7 +1,13 @@
 {
   "about": "About me",
+  "aboutText": "<p>Born in Barcelona. Since I tried my first computer when I was a child I knew that I wanted to work with computers when I grow up. With this objective in my mind, I had always been in touch with technology and eventually I started a degree in the university to accomplished it.</p><p>I finished Computer Engineering in 2010, and since then I have worked as a software developer. I started as a Java Developer, but since the beginning I had liked doing web development, so I learned PHP, HTML, CSS and JS. Also I am interested in game development and from time to time I make a simple game to learn new things.</p>",
   "game": "Play my Video Game",
   "projects": "Projects",
+  "codeOn": "Code and more info on <a href=\"{{url}}\">Github</a>",
+  "moreProjects": "<0>You can see more of my projects on <1>my Github profile</1></0>",
+  "easyTimerText": "<p>Easytimer.js is a small utility developed with JS that allows you to easily manage a stopwatch and countdown. It is fulled tested using mocha framework. It has +500 stars on GitHub and is used by several projects.</p>",
+  "nsbText": "<p>NoSoloBits is a website dedicated to retro video games. The backend part is made with PHP and MySQL. The frontend part is made with HTML, JS and SASS, compiled with Webpack.</p>",
+  "devAdventureText": "<p>I stepped out of my comfort zone to make this little video game, as I am not a video game designer. The result has been a simple, short game, but I think it’s still a good cover letter. I put a lot of passion into it, I hope you like it!</p>",
   "experience": "Work Experience",
   "footer": "Created by Albert González. Thank you for visiting me!"
 }

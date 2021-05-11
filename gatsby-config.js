@@ -38,7 +38,7 @@ module.exports = {
         name: `Albert González`,
         short_name: `Albert González`,
         start_url: `/`,
-        icon: "src/images/favicon.png",
+        icon: "src/images/icons/favicon.png",
       },
     },
   ],

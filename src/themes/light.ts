@@ -1,15 +1,23 @@
+export interface Theme {
+  colors: Record<string, string>;
+  components: Record<string, any>;
+  breakpoints: Record<string, string>;
+}
+
 export const lightTheme = {
   colors: {
     white: "#fff",
     black: "#000",
     darkGray: "#333",
-    lightGray: "#eee",
+    mediumGray: "#999",
+    lightGray: "#fafafa",
   },
   components: {
-    marginBottom: "40px",
+    margin: "20px",
   },
   breakpoints: {
     tablet: "768px",
-    desktop: "1280px",
+    desktop: "1024px",
+    largeDesktop: "1280px",
   },
 };

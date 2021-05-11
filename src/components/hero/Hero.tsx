@@ -17,7 +17,7 @@ interface HeroSectionImageProps {
 const HeroContainer = styled.div`
   height: calc(100vh - 60px);
   overflow: hidden;
-  margin-bottom: ${(props) => props.theme.components.marginBottom};
+  margin-bottom: ${(props) => props.theme.components.margin};
 `;
 
 const HeroExpandedContainer = styled.div`
@@ -29,7 +29,7 @@ const HeroExpandedContainer = styled.div`
   flex-wrap: wrap;
   margin: 0 -5%;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.largeDesktop}) {
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 0 -2%;
@@ -52,7 +52,7 @@ const HeroSectionSkewed = styled.a`
     z-index: 1;
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.largeDesktop}) {
     height: 100%;
   } ;
 `;
@@ -115,7 +115,7 @@ export const Hero = (): JSX.Element => {
           </HeroSectionImage>
         </HeroSectionSkewed>
 
-        <HeroSectionSkewed>
+        <HeroSectionSkewed href="#projects">
           <HeroSectionImage backgroundImage={projectsImage}>
             <HeroSectionColor backgroundColor="rgba(186, 38, 60, 0.5)">
               <HeroSectionText>{t("projects")}</HeroSectionText>
