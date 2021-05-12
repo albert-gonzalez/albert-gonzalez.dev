@@ -12,15 +12,15 @@ const experienceData = [
     dates: "mtDates",
     description: "mtDescription",
     badges: [
-      "PHP",
-      "Node.js",
-      "TypeScript",
-      "CSS",
-      "HTML",
-      "AWS",
-      "CI",
-      "Agile",
-      "DDD",
+      { text: "PHP", type: "back" },
+      { text: "Node.js", type: "back" },
+      { text: "AWS", type: "back" },
+      { text: "TypeScript", type: "front" },
+      { text: "CSS", type: "front" },
+      { text: "HTML", type: "front" },
+      { text: "Agile", type: "methodology" },
+      { text: "CI", type: "methodology" },
+      { text: "DDD", type: "methodology" },
     ],
   },
   {
@@ -28,28 +28,53 @@ const experienceData = [
     company: "Atrápalo",
     dates: "atrapaloLeadDates",
     description: "atrapaloLeadDescription",
-    badges: ["Node.js", "JS", "CSS", "HTML", "Agile", "Management"],
+    badges: [
+      { text: "Node.js", type: "back" },
+      { text: "JS", type: "front" },
+      { text: "CSS", type: "front" },
+      { text: "HTML", type: "front" },
+      { text: "Agile", type: "methodology" },
+      { text: "Management", type: "methodology" },
+    ],
   },
   {
     title: "atrapaloBackendTitle",
     company: "Atrápalo",
     dates: "atrapaloBackendDates",
     description: "atrapaloBackendDescription",
-    badges: ["PHP", "Node.js", "JS", "Agile", "CI", "DDD"],
+    badges: [
+      { text: "PHP", type: "back" },
+      { text: "Node.js", type: "back" },
+      { text: "JS", type: "front" },
+      { text: "Agile", type: "methodology" },
+      { text: "CI", type: "methodology" },
+      { text: "DDD", type: "methodology" },
+    ],
   },
   {
     title: "carverTitle",
     company: "Carver",
     dates: "carverDates",
     description: "carverDescription",
-    badges: ["Java", "JS", "CSS", "HTML"],
+    badges: [
+      { text: "Java", type: "back" },
+      { text: "JS", type: "front" },
+      { text: "CSS", type: "front" },
+      { text: "HTML", type: "front" },
+    ],
   },
   {
     title: "lcfibTitle",
     company: "LCFIB",
     dates: "lcfibDates",
     description: "lcfibDescription",
-    badges: ["PHP", "Java", "Oracle Forms", "Oracle Reports", "JS"],
+    badges: [
+      { text: "PHP", type: "back" },
+      { text: "Java", type: "back" },
+      { text: "Oracle Forms", type: "back" },
+      { text: "Oracle Reports", type: "back" },
+      { text: "JS", type: "front" },
+    ],
   },
 ];
 
@@ -64,7 +89,9 @@ const renderExperience = (t: TFunction) => {
         <Separator />
         <BadgeContainer>
           {exp.badges.map((badge) => (
-            <Badge key={badge}>{badge}</Badge>
+            <Badge key={badge.text} className={badge.type}>
+              {badge.text}
+            </Badge>
           ))}
         </BadgeContainer>
       </CardText>

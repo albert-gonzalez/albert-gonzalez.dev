@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Albert González`,
+        name: `Albert González - Software Developer`,
         short_name: `Albert González`,
         start_url: `/`,
         icon: "src/images/icons/favicon.png",

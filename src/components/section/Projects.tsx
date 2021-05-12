@@ -1,6 +1,6 @@
 import React from "react";
 import { Section, Separator } from "./Section";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import nsb from "../../images/icons/nsb.png";
 import easyTimer from "../../images/icons/easytimer.png";
 import devAdventure from "../../images/icons/devAdventure.png";
@@ -26,6 +26,7 @@ const projectsData = [
     image: devAdventure,
     description: "devAdventureText",
     codeUrl: "https://github.com/albert-gonzalez/a-dev-adventure-game",
+    playItUrl: "/game",
   },
 ];
 
@@ -57,6 +58,14 @@ const renderProjects = (t: TFunction) => {
               }),
             }}
           />
+        ) : (
+          ""
+        )}
+
+        {project.playItUrl ? (
+          <p>
+            <Link to={project.playItUrl}>{t("playItNow")}</Link>
+          </p>
         ) : (
           ""
         )}
