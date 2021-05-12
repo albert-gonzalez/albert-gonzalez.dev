@@ -10,8 +10,10 @@ export const lightTheme = {
     black: "#000",
     darkGray: "#333",
     mediumGray: "#999",
+    mediumLightGray: "#f0f0f0",
     lightGray: "#fafafa",
     primary: "#53a296",
+    secondary: "#206bb5",
   },
   components: {
     margin: "20px",

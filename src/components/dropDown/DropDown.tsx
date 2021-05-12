@@ -53,6 +53,7 @@ export const DropDown = ({
   className,
 }: DropDownInput): JSX.Element => {
   const [shown, setShown] = useState(false);
+
   useEffect(() => {
     const hideMenu = (e: MouseEvent) => {
       const element = e.target as Element;

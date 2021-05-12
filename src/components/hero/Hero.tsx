@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import styled from "styled-components";
 import aboutImage from "../../images/hero/about.jpg";
 import gameImage from "../../images/hero/game.jpg";
@@ -36,7 +36,7 @@ const HeroExpandedContainer = styled.div`
   }
 `;
 
-const HeroSectionSkewed = styled.a`
+const HeroSectionSkewed = styled(Link)`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -99,7 +99,7 @@ export const Hero = (): JSX.Element => {
   return (
     <HeroContainer>
       <HeroExpandedContainer>
-        <HeroSectionSkewed href="#about">
+        <HeroSectionSkewed to="#about">
           <HeroSectionImage backgroundImage={aboutImage}>
             <HeroSectionColor backgroundColor="rgba(245, 223, 77, 0.5)">
               <HeroSectionText>{t("about")}</HeroSectionText>
@@ -107,7 +107,7 @@ export const Hero = (): JSX.Element => {
           </HeroSectionImage>
         </HeroSectionSkewed>
 
-        <HeroSectionSkewed>
+        <HeroSectionSkewed to="/game">
           <HeroSectionImage backgroundImage={gameImage}>
             <HeroSectionColor backgroundColor="rgba(83, 162, 150, 0.5)">
               <HeroSectionText>{t("game")}</HeroSectionText>
@@ -115,7 +115,7 @@ export const Hero = (): JSX.Element => {
           </HeroSectionImage>
         </HeroSectionSkewed>
 
-        <HeroSectionSkewed href="#projects">
+        <HeroSectionSkewed to="#projects">
           <HeroSectionImage backgroundImage={projectsImage}>
             <HeroSectionColor backgroundColor="rgba(186, 38, 60, 0.5)">
               <HeroSectionText>{t("projects")}</HeroSectionText>
@@ -123,7 +123,7 @@ export const Hero = (): JSX.Element => {
           </HeroSectionImage>
         </HeroSectionSkewed>
 
-        <HeroSectionSkewed>
+        <HeroSectionSkewed to="#experience">
           <HeroSectionImage backgroundImage={experienceImage}>
             <HeroSectionColor backgroundColor="rgba(130, 158, 186, 0.5)">
               <HeroSectionText>{t("experience")}</HeroSectionText>

@@ -1,3 +1,4 @@
+import { Link } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 import styled from "styled-components";
 import logo from "../../images/icons/favicon.png";
@@ -13,6 +14,11 @@ const StyledBar = styled.div`
   height: 50px;
   justify-content: space-between;
   font-size: 1em;
+
+  a {
+    text-decoration: none;
+    color: ${(props) => props.theme.colors.white};
+  }
 `;
 
 const Left = styled.div`
@@ -35,14 +41,16 @@ export const Bar = (): JSX.Element => (
   <StyledBar>
     <Left>
       <Option>
-        <img src={logo} alt="Logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
       </Option>
       <Option>
-        <span>
+        <Link to="/">
           Albert
           <br />
           González
-        </span>
+        </Link>
       </Option>
     </Left>
     <Right>
