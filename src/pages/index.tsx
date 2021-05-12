@@ -13,7 +13,6 @@ const IndexPage = (): JSX.Element => (
     <About />
     <Projects />
     <Experience />
-    <Footer />
   </Layout>
 );
 
