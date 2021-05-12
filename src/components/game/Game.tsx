@@ -50,6 +50,7 @@ export const Game = (): JSX.Element => {
         onLoad={(ev) => resizeIframe(ev.target as HTMLIFrameElement)}
         ref={iframe}
         seamless
+        scrolling="no"
       />
     </GameContainer>
   );
