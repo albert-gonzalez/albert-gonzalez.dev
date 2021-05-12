@@ -1,9 +1,9 @@
 import React from "react";
 import { Section, Separator } from "./Section";
 import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
-import nsb from "../../images/icons/nsb.png";
-import easyTimer from "../../images/icons/easytimer.png";
-import devAdventure from "../../images/icons/devAdventure.png";
+import nsb from "../../images/icons/nsb.jpg";
+import easyTimer from "../../images/icons/easytimer.jpg";
+import devAdventure from "../../images/icons/devAdventure.jpg";
 import { Card, CardImage, CardText } from "../card/Card";
 import { TFunction } from "i18next";
 
