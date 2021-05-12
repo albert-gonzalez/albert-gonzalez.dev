@@ -16,7 +16,7 @@
     "prepare": "husky install",
     "lint-staged": "lint-staged",
     "check-ts": "tsc --noEmit",
-    "build-game": "rm -rf public/game && cd node_modules/a-dev-adventure/ && npm run build -- --out-dir ../../public/game",
+    "build-game": "rm -rf public/static/game && cd node_modules/a-dev-adventure/ && npm run build -- --out-dir ../../public/static/game",
     "prestart": "npm run build-game"
   },
   "dependencies": {
