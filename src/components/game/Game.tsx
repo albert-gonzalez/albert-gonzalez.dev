@@ -44,7 +44,7 @@ export const Game = (): JSX.Element => {
     <GameContainer>
       <iframe
         title="A Dev's Adventure"
-        src={`/game/game.html?lng=${language}`}
+        src={`./game/game.html?lng=${language}`}
         allowFullScreen
         onLoad={(ev) => resizeIframe(ev.target as HTMLIFrameElement)}
         ref={iframe}
