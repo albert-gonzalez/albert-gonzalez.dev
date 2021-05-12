@@ -1,6 +1,7 @@
 import { useI18next } from "gatsby-plugin-react-i18next";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { withPrefix } from "gatsby";
 
 const GameContainer = styled.div`
   display: flex;
@@ -44,7 +45,7 @@ export const Game = (): JSX.Element => {
     <GameContainer>
       <iframe
         title="A Dev's Adventure"
-        src={`./game/game.html?lng=${language}`}
+        src={withPrefix(`/game/game.html?lng=${language}`)}
         allowFullScreen
         onLoad={(ev) => resizeIframe(ev.target as HTMLIFrameElement)}
         ref={iframe}
