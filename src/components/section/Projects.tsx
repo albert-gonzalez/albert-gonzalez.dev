@@ -5,6 +5,65 @@ import nsb from "../../images/icons/nsb.png";
 import easyTimer from "../../images/icons/easytimer.png";
 import devAdventure from "../../images/icons/devAdventure.png";
 import { Card, CardImage, CardText } from "../card/Card";
+import { TFunction } from "i18next";
+
+const projectsData = [
+  {
+    title: "NoSoloBits",
+    image: nsb,
+    description: "nsbText",
+    codeUrl: undefined,
+    siteUrl: "https://www.nosolobits.com",
+  },
+  {
+    title: "EasyTimer.js",
+    image: easyTimer,
+    description: "easyTimerText",
+    codeUrl: "https://github.com/albert-gonzalez/easytimer.js",
+  },
+  {
+    title: "A Dev's adventure",
+    image: devAdventure,
+    description: "devAdventureText",
+    codeUrl: "https://github.com/albert-gonzalez/a-dev-adventure-game",
+  },
+];
+
+const renderProjects = (t: TFunction) => {
+  return projectsData.map((project) => (
+    <Card key={project.title}>
+      <CardImage backgroundImage={project.image}></CardImage>
+      <CardText>
+        <h3>{project.title}</h3>
+
+        <Trans>{t(project.description)}</Trans>
+        {project.siteUrl ? (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("visitSite", {
+                url: project.siteUrl,
+              }),
+            }}
+          />
+        ) : (
+          ""
+        )}
+
+        {project.codeUrl ? (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("codeOn", {
+                url: project.codeUrl,
+              }),
+            }}
+          />
+        ) : (
+          ""
+        )}
+      </CardText>
+    </Card>
+  ));
+};
 
 export const Projects = (): JSX.Element => {
   const { t } = useTranslation();
@@ -14,48 +73,7 @@ export const Projects = (): JSX.Element => {
       <div>
         <h2>{t("projects")}</h2>
       </div>
-      <Card>
-        <CardImage backgroundImage={nsb}></CardImage>
-        <CardText>
-          <h3>NoSoloBits</h3>
-
-          <Trans>{t("nsbText")}</Trans>
-          <p>
-            Site:{" "}
-            <a href="https://www.nosolobits.com">https://www.nosolobits.com</a>
-          </p>
-        </CardText>
-      </Card>
-      <Card>
-        <CardImage backgroundImage={easyTimer}></CardImage>
-        <CardText>
-          <h3>EasyTimer.js</h3>
-
-          <Trans>{t("easyTimerText")}</Trans>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("codeOn", {
-                url: "https://github.com/albert-gonzalez/easytimer.js",
-              }),
-            }}
-          />
-        </CardText>
-      </Card>
-      <Card>
-        <CardImage backgroundImage={devAdventure}></CardImage>
-        <CardText>
-          <h3>A Dev&apos;s adventure</h3>
-
-          <Trans>{t("devAdventureText")}</Trans>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("codeOn", {
-                url: "https://github.com/albert-gonzalez/a-dev-adventure-game",
-              }),
-            }}
-          />
-        </CardText>
-      </Card>
+      {renderProjects(t)}
       <Trans i18nKey="moreProjects">
         <p>
           You can see more of my projects on

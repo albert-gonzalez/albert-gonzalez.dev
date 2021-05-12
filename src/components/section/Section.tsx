@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Separator = styled.hr`
   margin: 40px 20px;
-  border-top: 2px solid ${(props) => props.theme.colors.mediumGray};
+  border-top: 2px solid ${(props) => props.theme.colors.mediumLightGray};
 `;
 
 export const SubSection = styled.div`

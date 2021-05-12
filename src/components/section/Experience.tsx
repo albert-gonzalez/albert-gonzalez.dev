@@ -1,11 +1,76 @@
 import React from "react";
 import { Section, Separator } from "./Section";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
-import nsb from "../../images/icons/nsb.png";
-import easyTimer from "../../images/icons/easytimer.png";
-import devAdventure from "../../images/icons/devAdventure.png";
-import { Card, CardImage, CardText } from "../card/Card";
+import { Card, CardText } from "../card/Card";
 import { Badge, BadgeContainer } from "../badge/Badge";
+import { TFunction } from "i18next";
+
+const experienceData = [
+  {
+    title: "mtTitle",
+    company: "Mailtrack",
+    dates: "mtDates",
+    description: "mtDescription",
+    badges: [
+      "PHP",
+      "Node.js",
+      "TypeScript",
+      "CSS",
+      "HTML",
+      "AWS",
+      "CI",
+      "Agile",
+      "DDD",
+    ],
+  },
+  {
+    title: "atrapaloLeadTitle",
+    company: "Atrápalo",
+    dates: "atrapaloLeadDates",
+    description: "atrapaloLeadDescription",
+    badges: ["Node.js", "JS", "CSS", "HTML", "Agile", "Management"],
+  },
+  {
+    title: "atrapaloBackendTitle",
+    company: "Atrápalo",
+    dates: "atrapaloBackendDates",
+    description: "atrapaloBackendDescription",
+    badges: ["PHP", "Node.js", "JS", "Agile", "CI", "DDD"],
+  },
+  {
+    title: "carverTitle",
+    company: "Carver",
+    dates: "carverDates",
+    description: "carverDescription",
+    badges: ["Java", "JS", "CSS", "HTML"],
+  },
+  {
+    title: "lcfibTitle",
+    company: "LCFIB",
+    dates: "lcfibDates",
+    description: "lcfibDescription",
+    badges: ["PHP", "Java", "Oracle Forms", "Oracle Reports", "JS"],
+  },
+];
+
+const renderExperience = (t: TFunction) => {
+  return experienceData.map((exp) => (
+    <Card key={exp.title}>
+      <CardText>
+        <h3>{t(exp.title)}</h3>
+        <h5>{exp.company}</h5>
+        <h5>{t(exp.dates)}</h5>
+        <Trans>{t(exp.description)}</Trans>
+        <Separator />
+        <BadgeContainer>
+          {exp.badges.map((badge) => (
+            <Badge key={badge}>{badge}</Badge>
+          ))}
+        </BadgeContainer>
+      </CardText>
+    </Card>
+  ));
+};
 
 export const Experience = (): JSX.Element => {
   const { t } = useTranslation();
@@ -13,27 +78,7 @@ export const Experience = (): JSX.Element => {
   return (
     <Section id="experience">
       <h2>{t("experience")}</h2>
-      <Card>
-        <CardText>
-          <h3>Software Engineer</h3>
-          <h5>Mailtrack</h5>
-          <h5>{t("mtDates")}</h5>
-
-          <Trans>{t("mtText")}</Trans>
-
-          <h5>Keywords</h5>
-          <BadgeContainer>
-            <Badge>PHP</Badge>
-            <Badge>Node.js</Badge>
-            <Badge>TypeScript</Badge>
-            <Badge>CSS</Badge>
-            <Badge>HTML</Badge>
-            <Badge>AWS</Badge>
-            <Badge>Agile</Badge>
-          </BadgeContainer>
-        </CardText>
-      </Card>
-      <Separator />
+      {renderExperience(t)}
     </Section>
   );
 };
