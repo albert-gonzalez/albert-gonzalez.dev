@@ -9,7 +9,6 @@ export const Card = styled.div`
   margin-top: 0;
   display: flex;
   background-color: ${(props) => props.theme.colors.white};
-  border: 1px solid ${(props) => props.theme.colors.mediumGray};
   border-radius: 5px;
   box-shadow: 1px 1px 5px ${(props) => props.theme.colors.mediumGray};
   overflow: hidden;
