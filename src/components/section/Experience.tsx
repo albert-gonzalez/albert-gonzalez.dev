@@ -5,7 +5,15 @@ import { Card, CardText } from "../card/Card";
 import { Badge, BadgeContainer } from "../badge/Badge";
 import { TFunction } from "i18next";
 
-const experienceData = [
+interface Experience {
+  title: string;
+  company: string;
+  dates: string;
+  description: string;
+  badges: { text: string; type: string }[];
+}
+
+const experienceData: Experience[] = [
   {
     title: "mtTitle",
     company: "Mailtrack",
@@ -84,25 +92,32 @@ const experienceData = [
   },
 ];
 
-const renderExperience = (t: TFunction) => {
-  return experienceData.map((exp) => (
-    <Card key={exp.title}>
-      <CardText>
-        <h3>{t(exp.title)}</h3>
-        <h5>{exp.company}</h5>
-        <h5>{t(exp.dates)}</h5>
-        <Trans>{t(exp.description)}</Trans>
-        <Separator />
-        <BadgeContainer>
-          {exp.badges.map((badge) => (
-            <Badge key={badge.text} className={badge.type}>
-              {badge.text}
-            </Badge>
-          ))}
-        </BadgeContainer>
-      </CardText>
-    </Card>
-  ));
+export const renderExperience = (
+  t: TFunction,
+  experienceData: Experience[]
+): React.ReactElement => {
+  return (
+    <React.Fragment>
+      {experienceData.map((exp) => (
+        <Card key={exp.title}>
+          <CardText>
+            <h3>{t(exp.title)}</h3>
+            <h5>{exp.company}</h5>
+            <h5>{t(exp.dates)}</h5>
+            <Trans>{t(exp.description)}</Trans>
+            <Separator />
+            <BadgeContainer>
+              {exp.badges.map((badge) => (
+                <Badge key={badge.text} className={badge.type}>
+                  {badge.text}
+                </Badge>
+              ))}
+            </BadgeContainer>
+          </CardText>
+        </Card>
+      ))}
+    </React.Fragment>
+  );
 };
 
 export const Experience = (): JSX.Element => {
@@ -111,7 +126,7 @@ export const Experience = (): JSX.Element => {
   return (
     <Section id="experience">
       <h2>{t("experience")}</h2>
-      {renderExperience(t)}
+      {renderExperience(t, experienceData)}
     </Section>
   );
 };

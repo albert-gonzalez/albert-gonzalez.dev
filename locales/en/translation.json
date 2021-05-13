@@ -34,5 +34,7 @@
   "carverTitle": "J2EE Developer",
   "carverDates": "September 2010 - January 2014",
   "carverDescription": "<p>I worked as a J2EE and Oracle SQL developer developing an insurance application. The application managed and priced insurances from different areas.</p>",
-  "footer": "Created by Albert González. Thank you for visiting me!"
+  "footer": "Created by Albert González. Thank you for visiting me!",
+  "404error": "Nothing to see here",
+  "goToMainPage": "Go to the main page"
 }

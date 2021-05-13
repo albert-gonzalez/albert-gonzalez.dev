@@ -7,7 +7,15 @@ import devAdventure from "../../images/icons/devAdventure.jpg";
 import { Card, CardImage, CardText } from "../card/Card";
 import { TFunction } from "i18next";
 
-const projectsData = [
+interface Project {
+  title: string;
+  image: string;
+  description: string;
+  codeUrl?: string;
+  siteUrl?: string;
+  playItUrl?: string;
+}
+const projectsData: Project[] = [
   {
     title: "NoSoloBits",
     image: nsb,
@@ -30,48 +38,55 @@ const projectsData = [
   },
 ];
 
-const renderProjects = (t: TFunction) => {
-  return projectsData.map((project) => (
-    <Card key={project.title}>
-      <CardImage backgroundImage={project.image}></CardImage>
-      <CardText>
-        <h3>{project.title}</h3>
+export const renderProjects = (
+  t: TFunction,
+  projectsData: Project[]
+): React.ReactElement => {
+  return (
+    <React.Fragment>
+      {projectsData.map((project) => (
+        <Card key={project.title}>
+          <CardImage backgroundImage={project.image}></CardImage>
+          <CardText>
+            <h3>{project.title}</h3>
 
-        <Trans>{t(project.description)}</Trans>
-        {project.siteUrl ? (
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("visitSite", {
-                url: project.siteUrl,
-              }),
-            }}
-          />
-        ) : (
-          ""
-        )}
+            <Trans>{t(project.description)}</Trans>
+            {project.siteUrl ? (
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t("visitSite", {
+                    url: project.siteUrl,
+                  }),
+                }}
+              />
+            ) : (
+              ""
+            )}
 
-        {project.codeUrl ? (
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("codeOn", {
-                url: project.codeUrl,
-              }),
-            }}
-          />
-        ) : (
-          ""
-        )}
+            {project.codeUrl ? (
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t("codeOn", {
+                    url: project.codeUrl,
+                  }),
+                }}
+              />
+            ) : (
+              ""
+            )}
 
-        {project.playItUrl ? (
-          <p>
-            <Link to={project.playItUrl}>{t("playItNow")}</Link>
-          </p>
-        ) : (
-          ""
-        )}
-      </CardText>
-    </Card>
-  ));
+            {project.playItUrl ? (
+              <p>
+                <Link to={project.playItUrl}>{t("playItNow")}</Link>
+              </p>
+            ) : (
+              ""
+            )}
+          </CardText>
+        </Card>
+      ))}
+    </React.Fragment>
+  );
 };
 
 export const Projects = (): JSX.Element => {
@@ -79,10 +94,8 @@ export const Projects = (): JSX.Element => {
 
   return (
     <Section id="projects">
-      <div>
-        <h2>{t("projects")}</h2>
-      </div>
-      {renderProjects(t)}
+      <h2>{t("projects")}</h2>
+      {renderProjects(t, projectsData)}
       <Trans i18nKey="moreProjects">
         <p>
           You can see more of my projects on

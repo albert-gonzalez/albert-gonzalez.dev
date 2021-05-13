@@ -1,39 +1,52 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import Layout from "../components/layout/Layout";
+import { Helmet, Link, useTranslation } from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
+import styled from "styled-components";
+import image404 from "../images/icons/404.png";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
+const NotFound = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: ${(props) => props.theme.components.margin};
+  text-align: center;
 
-const paragraphStyles = {
-  marginBottom: 48,
-};
+  img {
+    margin-bottom: ${(props) => props.theme.components.margin};
+  }
+`;
 
 // markup
 const NotFoundPage = (): JSX.Element => {
+  const { t } = useTranslation();
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <Helmet title={`Albert González - ${t("404error")}`} />
+      <NotFound>
+        <img src={image404} />
+        <h3>{t("404error")}</h3>
+        <h4>
+          <Link to="/">{t("goToMainPage")}</Link>
+        </h4>
+      </NotFound>
+    </Layout>
   );
 };
 
 export default NotFoundPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

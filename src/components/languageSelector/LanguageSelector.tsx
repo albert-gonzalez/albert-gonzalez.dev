@@ -14,13 +14,13 @@ const flags: Record<string, string> = {
 const renderContent = (originalPath: string) => (
   <React.Fragment>
     <Link to={originalPath} language="en">
-      <DropDownIcon src={enFlag} />
+      <DropDownIcon src={enFlag} alt="en" />
     </Link>
     <Link to={originalPath} language="ca">
-      <DropDownIcon src={caFlag} />
+      <DropDownIcon src={caFlag} alt="ca" />
     </Link>
     <Link to={originalPath} language="es">
-      <DropDownIcon src={esFlag} />
+      <DropDownIcon src={esFlag} alt="es" />
     </Link>
   </React.Fragment>
 );

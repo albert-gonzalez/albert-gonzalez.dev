@@ -34,5 +34,7 @@
   "carverTitle": "J2EE Developer",
   "carverDates": "Setembre 2010 - Gener 2014",
   "carverDescription": "<p>Desenvolupador J2EE i Oracle SQL fent una aplicació d'assegurances. La aplicació gestionava i tarifava assegurances de diferents àmbits.</p>",
-  "footer": "Creat per Albert González. Gràcies per visitar-me!"
+  "footer": "Creat per Albert González. Gràcies per visitar-me!",
+  "404error": "Aquí no hi ha res a veure",
+  "goToMainPage": "Ves a la plana principal"
 }

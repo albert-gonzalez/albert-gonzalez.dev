@@ -42,7 +42,7 @@ export const Global = createGlobalStyle<{ theme: Theme }>`
   }
 
   p, li {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.6em;
     margin-top: 0;
   }

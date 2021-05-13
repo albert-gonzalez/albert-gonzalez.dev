@@ -35,5 +35,7 @@
   "carverTitle": "J2EE Developer",
   "carverDates": "Septiembre 2010 - Enero 2014",
   "carverDescription": "<p>Desarrollador J2EE y Oracle SQL haciendo una aplicación de seguros. La aplicación gestionaba y tarifaba seguros de diferentes ámbitos.</p>",
-  "footer": "Creado por Albert González. ¡Gracias por visitarme!"
+  "footer": "Creado por Albert González. ¡Gracias por visitarme!",
+  "404error": "Aquí no hay nada que ver",
+  "goToMainPage": "Ir a la página principal"
 }
