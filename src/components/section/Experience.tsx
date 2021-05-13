@@ -14,6 +14,8 @@ const experienceData = [
     badges: [
       { text: "PHP", type: "back" },
       { text: "Node.js", type: "back" },
+      { text: "MySQL", type: "back" },
+      { text: "Redis", type: "back" },
       { text: "AWS", type: "back" },
       { text: "TypeScript", type: "front" },
       { text: "CSS", type: "front" },
@@ -45,6 +47,9 @@ const experienceData = [
     badges: [
       { text: "PHP", type: "back" },
       { text: "Node.js", type: "back" },
+      { text: "MySQL", type: "back" },
+      { text: "Redis", type: "back" },
+      { text: "RabbitMQ", type: "back" },
       { text: "JS", type: "front" },
       { text: "Agile", type: "methodology" },
       { text: "CI", type: "methodology" },
@@ -53,11 +58,12 @@ const experienceData = [
   },
   {
     title: "carverTitle",
-    company: "Carver",
+    company: "Carver Advanced Systems",
     dates: "carverDates",
     description: "carverDescription",
     badges: [
       { text: "Java", type: "back" },
+      { text: "Oracle SQL", type: "back" },
       { text: "JS", type: "front" },
       { text: "CSS", type: "front" },
       { text: "HTML", type: "front" },

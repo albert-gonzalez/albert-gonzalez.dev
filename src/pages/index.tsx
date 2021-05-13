@@ -1,7 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { About } from "../components/section/About";
-import { Footer } from "../components/footer/Footer";
 import { Projects } from "../components/section/Projects";
 import { Experience } from "../components/section/Experience";
 import Layout from "../components/layout/Layout";
