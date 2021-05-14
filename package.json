@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "npm run build-game && gatsby build --prefix-paths",
+    "build": "npm run build-game && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest test",
