@@ -56,7 +56,7 @@ export const Bar = (): JSX.Element => (
     <Right>
       <Option>
         <a
-          href="https://www.github.com/albert-gonzalez"
+          href="https://github.com/albert-gonzalez/albert-gonzalez.dev"
           target="_blank"
           rel="noreferrer"
         >

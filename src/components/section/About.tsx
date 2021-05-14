@@ -22,13 +22,25 @@ export const About = (): JSX.Element => {
       </SectionFlex>
       <SectionFlexReverse>
         <SectionIcons>
-          <a href="https://www.github.com/albert-gonzalez">
+          <a
+            href="https://www.github.com/albert-gonzalez"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={github} alt="GitHub" />
           </a>
-          <a href="https://www.linkedin.com/in/albert-gonz%C3%A1lez/">
+          <a
+            href="https://www.linkedin.com/in/albert-gonz%C3%A1lez/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={linkedIn} alt="LinkedIn" />
           </a>
-          <a href="https://www.twitter.com/vacilone">
+          <a
+            href="https://www.twitter.com/vacilone"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={twitter} alt="Twitter" />
           </a>
         </SectionIcons>

@@ -28,6 +28,7 @@ const projectsData: Project[] = [
     image: easyTimer,
     description: "easyTimerText",
     codeUrl: "https://github.com/albert-gonzalez/easytimer.js",
+    siteUrl: "https://albert-gonzalez.github.io/easytimer.js",
   },
   {
     title: "A Dev's adventure",
@@ -99,7 +100,13 @@ export const Projects = (): JSX.Element => {
       <Trans i18nKey="moreProjects">
         <p>
           You can see more of my projects on
-          <a href="https://github.com/albert-gonzalez">my Github profile</a>
+          <a
+            href="https://github.com/albert-gonzalez"
+            target="_blank"
+            rel="noreferrer"
+          >
+            my Github profile
+          </a>
         </p>
       </Trans>
       <Separator />

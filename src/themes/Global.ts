@@ -21,11 +21,11 @@ export const Global = createGlobalStyle<{ theme: Theme }>`
   }
 
   h2 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
 
   h4 {
@@ -42,8 +42,8 @@ export const Global = createGlobalStyle<{ theme: Theme }>`
   }
 
   p, li {
-    font-size: 1.2em;
-    line-height: 1.6em;
+    font-size: 1.1em;
+    line-height: 1.8em;
     margin-top: 0;
   }
 
