@@ -4,13 +4,19 @@ import { Helmet, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { Game } from "../components/game/Game";
 import { Section } from "../components/section/Section";
 import Layout from "../components/layout/Layout";
+import Seo from "../components/layout/Seo";
+import gameImage from "../images/hero/gameTitle.jpg";
 
 const GamePage = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
     <Layout>
-      <Helmet title="Albert González - A Dev's Adventure" />
+      <Seo
+        title="Albert González - Software Developer"
+        description={t("devAdventureIntro")}
+        image={gameImage}
+      />
       <Game />
       <Section>
         <h2>{t("devAdventureTitle")}</h2>

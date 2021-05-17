@@ -1,7 +1,10 @@
 module.exports = {
   pathPrefix: "/albert-gonzalez.dev",
   siteMetadata: {
-    title: "albert-gonzalez.dev",
+    title: "Albert González - Software Developer",
+    description: "Site about Albert González and his projects",
+    url: "https://albert-gonzalez.dev",
+    twitterUsername: "@vacilone",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
