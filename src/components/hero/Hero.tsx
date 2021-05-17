@@ -107,7 +107,7 @@ export const Hero = (): JSX.Element => {
           </HeroSectionImage>
         </HeroSectionSkewed>
 
-        <HeroSectionSkewed to="/game">
+        <HeroSectionSkewed to="/a-dev-adventure">
           <HeroSectionImage backgroundImage={gameImage}>
             <HeroSectionColor backgroundColor="rgba(83, 162, 150, 0.5)">
               <HeroSectionText>{t("game")}</HeroSectionText>

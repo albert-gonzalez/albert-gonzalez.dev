@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     image: devAdventure,
     description: "devAdventureText",
     codeUrl: "https://github.com/albert-gonzalez/a-dev-adventure-game",
-    playItUrl: "/game",
+    playItUrl: "/a-dev-adventure",
   },
 ];
 
