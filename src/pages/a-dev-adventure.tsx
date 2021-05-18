@@ -13,7 +13,7 @@ const GamePage = (): JSX.Element => {
   return (
     <Layout>
       <Seo
-        title="Albert González - Software Developer"
+        title="Albert González - A Dev's Adventure"
         description={t("devAdventureIntro")}
         image={gameImage}
       />
