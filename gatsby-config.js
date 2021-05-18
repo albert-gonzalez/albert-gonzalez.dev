@@ -20,19 +20,31 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        localeJsonSourceName: `locale`,
         languages: [`en`, `es`, `ca`],
         defaultLanguage: `en`,
-        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        //siteUrl: `https://example.com/`,
-        // you can pass any i18next options
-        // pass following options to allow message content as a key
         i18nextOptions: {
           interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
+            escapeValue: false,
           },
           keySeparator: false,
           nsSeparator: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-ECWE3HNDPM", // Google Analytics / GA
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
         },
       },
     },
