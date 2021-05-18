@@ -17,8 +17,8 @@ const Seo = ({ title, description = "", image }: SeoInput): JSX.Element => {
       <meta name="description" content={description} />
       <meta name="image" content={image} />
       <meta name="author" content="Albert González" />
-      <meta property="og:title" content="Website" />
-      <meta property="og:type" content={title} />
+      <meta property="og:title" content={title} />
+      <meta property="og:type" content="Website" />
       {description && <meta property="og:description" content={description} />}
       {image && <meta property="og:image" content={image} />}
       {description && <meta name="twitter:description" content={description} />}
