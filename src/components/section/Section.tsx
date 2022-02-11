@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Separator = styled.hr`
   margin: 40px 20px;
-  border-top: 2px solid ${(props) => props.theme.colors.mediumLightGray};
+  border-top: 3px solid ${(props) => props.theme.colors.mediumLightGray};
 `;
 
 export const SubSection = styled.div`
@@ -57,4 +57,12 @@ export const SectionText = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
     width: 75%;
   }
+`;
+
+export const SectionHeader = styled.h2`
+  position: sticky;
+  top: 60px;
+  padding: 10px 0;
+  border-bottom: 2px solid ${(props) => props.theme.colors.mediumLightGray};
+  background-color: ${(props) => props.theme.colors.lightGray};
 `;

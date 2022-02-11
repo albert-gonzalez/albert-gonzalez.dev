@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Separator } from "./Section";
+import { Section, SectionHeader, Separator } from "./Section";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { Card, CardText } from "../card/Card";
 import { Badge, BadgeContainer } from "../badge/Badge";
@@ -125,7 +125,7 @@ export const Experience = (): JSX.Element => {
 
   return (
     <Section id="experience">
-      <h2>{t("experience")}</h2>
+      <SectionHeader>{t("experience")}</SectionHeader>
       {renderExperience(t, experienceData)}
     </Section>
   );

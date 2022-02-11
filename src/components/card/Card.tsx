@@ -5,7 +5,7 @@ interface CardImageProps {
 }
 
 export const Card = styled.div`
-  margin: ${(props) => props.theme.components.margin};
+  margin: 25px;
   margin-top: 0;
   display: flex;
   background-color: ${(props) => props.theme.colors.white};

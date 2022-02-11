@@ -14,6 +14,9 @@ const StyledBar = styled.div`
   height: 50px;
   justify-content: space-between;
   font-size: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 
   a {
     text-decoration: none;

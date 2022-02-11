@@ -1,8 +1,8 @@
 import React from "react";
 import {
   Section,
-  SectionFlex,
   SectionFlexReverse,
+  SectionHeader,
   SectionIcons,
   SectionText,
   Separator,
@@ -17,9 +17,8 @@ export const About = (): JSX.Element => {
 
   return (
     <Section id="about">
-      <SectionFlex>
-        <h2>{t("about")}</h2>
-      </SectionFlex>
+      <SectionHeader>{t("about")}</SectionHeader>
+
       <SectionFlexReverse>
         <SectionIcons>
           <a

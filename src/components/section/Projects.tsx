@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Separator } from "./Section";
+import { Section, SectionHeader, Separator } from "./Section";
 import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import nsb from "../../images/icons/nsb.jpg";
 import easyTimer from "../../images/icons/easytimer.jpg";
@@ -95,7 +95,7 @@ export const Projects = (): JSX.Element => {
 
   return (
     <Section id="projects">
-      <h2>{t("projects")}</h2>
+      <SectionHeader>{t("projects")}</SectionHeader>
       {renderProjects(t, projectsData)}
       <Trans i18nKey="moreProjects">
         <p>
